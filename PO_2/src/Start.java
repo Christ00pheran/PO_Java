@@ -1,6 +1,14 @@
 import java.util.Scanner;
 
 public class Start {
+    public static int silnia (int b){
+        int suma = 1;
+        for (int i = 1; i <= b; i++) {
+            suma*=i;
+        }
+        return suma;
+
+    }
     public static  void main(String[] args){
 
         //zad1.1a
@@ -19,7 +27,7 @@ public class Start {
 //        }
 //        System.out.println(sum);
 
-    //zad1.1b
+        //zad1.1b
 //        Scanner reader = new Scanner(System.in);
 //        System.out.println("Podaj n: ");
 //        int n = reader.nextInt();
@@ -55,7 +63,7 @@ public class Start {
 //        System.out.println(sum);
 
 
-        //zad1.1d***
+        //zad1.1d
 //        Scanner reader = new Scanner(System.in);
 //        System.out.println("Podaj n: ");
 //        int n = reader.nextInt();
@@ -65,10 +73,10 @@ public class Start {
 //            System.out.println("Podaj a: ");
 //            int a = reader2.nextInt();
 //            if (a >= 0) {
-//                sum += a^(1/2);
+//                sum += Math.sqrt(a);
 //
 //            }else if(a<0) {
-//                sum+=-a^(1/2);
+//                sum+=-Math.sqrt(a);
 //            }
 //
 //        }
@@ -147,21 +155,23 @@ public class Start {
 //
 //
 //        System.out.println(sum);
-        //zad1.1i***
+        //zad1.1i
+
+
 //        Scanner reader = new Scanner(System.in);
 //        System.out.println("Podaj n: ");
 //        int n = reader.nextInt();
-//        int sum=0;
+//        float sum=0;
 //        for(int i=1; i<=n;i++){
 //            Scanner reader2 = new Scanner(System.in);
 //            System.out.println("Podaj a: ");
 //            int a = reader2.nextInt();
 //            if(i%2==0) {
 //
-//                sum+=a;
+//                sum+=a/silnia(i);
 //            }
 //            else if(i%2!=0){
-//                sum+=-a;
+//                sum+=-a/silnia(i);
 //
 //            }
 //        }
@@ -242,33 +252,28 @@ public class Start {
 //            arr[i-1] = reader2.nextInt();
 //
 //        }
-//        for(int j=0;j<=arr.length;j++){
-//            for(int k=0;k<=arr.length;k++){
-//                if(j<k)
 //
-//            }
-//        }
 //
 //        System.out.println();
 
         //zad5
-//        Scanner reader = new Scanner(System.in);
-//        System.out.println("Podaj n: ");
-//        int n = reader.nextInt();
-//        int[] arr;
-//        arr=new int[n];
-//        for(int i=1; i<=n;i++){
-//            Scanner reader2 = new Scanner(System.in);
-//            System.out.println("Podaj a: ");
-//            arr[i-1] = reader2.nextInt();
-//
-//        }
-//        for(int j=0;j<=n;j++){
-//            if(arr[j]>0&&arr[j+1]>0){
-//                System.out.println("("+arr[j]+","+arr[j+1]+")");
-//            }
-//
-//        }
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Podaj n: ");
+        int n = reader.nextInt();
+        int[] arr;
+        arr=new int[n];
+        for(int i=1; i<=n;i++){
+            Scanner reader2 = new Scanner(System.in);
+            System.out.println("Podaj a: ");
+            arr[i-1] = reader2.nextInt();
+
+        }
+        for(int j=0;j<=n;j++){
+            if(arr[j]>0&&arr[j+1]>0){
+                System.out.println("("+arr[j]+","+arr[j+1]+")");
+            }
+
+        }
 
     }
 
