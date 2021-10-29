@@ -18,7 +18,11 @@ public class Start {
         System.out.println("Dodatnich: "+sumaDodatnich(a));
         System.out.println("Ujemnych: "+sumaUjemnych(a));
         System.out.println("Maks ciag dodatnich: "+dlugoscMaksymalnegoCiaguDodatnich(a));
+        System.out.println("Maksymalnych: "+ileMaksymalnych(a));
         signum(a);
+        System.out.println("----------------");
+        odwrocFragmet(a,1,3);
+
 
 
     }
@@ -149,8 +153,36 @@ public class Start {
             }
             else if(tab[i]<0){tab[i]=-1;}
         }
-
+    wypisz(tab);
     }
+    public static void odwrocFragmet(int tab[], int lewy, int prawy){
+        for(int i=lewy; i<=prawy-lewy;i++){
+            int t=tab[i];
+            tab[i]=tab[prawy];
+            tab[prawy]=t;
+            prawy--;
+
+        }
+
+        wypisz(tab);
+    }
+    public static int ileMaksymalnych(int tab[]){
+        int suma=0;
+        int max=0;
+        for(int i=1; i<tab.length;i++){
+            if(tab[i]>tab[max]) {
+                max=i;
+            }
+            }
+        for(int i=0; i<tab.length;i++){
+            if(tab[i]==tab[max]){
+                suma+=1;
+            }
+        }
+            return suma;
+        }
+
+
 
 
 
